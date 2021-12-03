@@ -19,4 +19,4 @@ Legat de consumarea API, legatura intre frontend si backend (vezi documentatia s
 
 Ca si bonus al probei(https://docs.google.com/document/d/1aNoweFJ4KK9T0du9sXRs0hpEUJMJlA220lK3U4vM2kY/edit) am realizat posibilitatea de stergere a inrolarilor studentilor.
 
-Pe parcursul rezolvarii probei, cred ca cel mai mare challenge intalnit a fost invatarea tehnologiilor folosite pe parcurs, si implementarea taskurilor folosindu-le. Desigur, Google a fost prietenul care la nevoie se cunoaste si care m-a invatat multe chestii, insa si trainingurile au fost utile in dobandirea unei baze solide. Gestionarea timpului a fost din nou un challenge, insa organizarea eficienta a rezolvat aceasta problema.
+Desigur, Google a fost prietenul care la nevoie se cunoaste si care m-a invatat multe chestii, insa si trainingurile au fost utile in dobandirea cunostintelor necesare.
