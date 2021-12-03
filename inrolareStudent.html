@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bazaroo-Inrolare-Student</title>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- CSS & Bootstrap Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Droid Sans" rel="stylesheet">
+
+  <!--Icons link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <section>
+    <div class="container-fluid">
+
+      <div class="backNav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+          <p class="navbar-brand" href="#"><img src="images/logo.png" alt="Bazaroo" style="width: 85%; height:85%;"></p>
+
+          <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+            <img src="images/icon.svg" alt="">
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto text-right" style="position: relative; left: -20px; top: -6px">
+              <li class="nav-item">
+                <button type="button" name="button" class="btn button-navbar scris" id="#meditatie" onclick="window.location.href='meditatieStudent.html';">Meditatii</button>
+              </li>
+              <li class="nav-item">
+                <button type="button" name="button" class="btn button-navbar scris" id="#inrolare" onclick="window.location.href='inrolareStudent.html';">Inrolari</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h2 class="scris">Inscrierile tale:</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <select class="text-center scris solid" style="width:40%; height:150%;">
+        <option selected>Toate</option>
+        <option value="a">Matematici Speciale</option>
+        <option value="b">Fizica</option>
+        <option value="c">Informatica</option>
+        <option value="d">POO</option>
+        <!-- Butonul de selectare optiuni -->
+      </select>
+    </div>
+  </div>
+</div>
+
+  <section class="main">
+    <div class="container-fluid">
+      <div class="row text-left">
+        <div class="col-12 text-left">
+          <ul style="text-align:start; margin-left: 0%;" id="enrollare"></ul>
+          <!-- aici vor aparea inrolarile pentru a fi vizibile elevului care s-a inrolat, si vor fi preluate dinamic  -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-5" style="position:relative; bottom:0;">
+    <div class="container-fluid pt-5 m-0 p-0 pb-0 ">
+      <div class="row">
+        <div class="col-md-6 footerPadding">
+          <img class="img-fluid" src="images/footer.png" alt="footer">
+        </div>
+        <div class="col-md-3 "></div>
+        <div class="col-md-3 d-flex">
+          <img src="images/fb.png" style="height:35%; width:20%; margin-top:30%;" alt="">
+          <img src="images/insta.png" style="height:35%; width:20%; margin-top:30%;" alt="">
+          <img src="images/twit.png" style="height:35%; width:20%; margin-top:30%;" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+
+<script type="text/javascript" src="inrolareStudent.js"></script>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bazaroo</title>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- CSS & Bootstrap Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Droid Sans" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <!-- Pentru fiecare buton care deschide o fereastra popup, i-am integrat implementarea in cadrul nevbarului, pentru a fi inteles ca acela este codul specific actiunii pe care butonul o face -->
+  <section>
+    <div class="container-fluid">
+
+      <div class="backNav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+          <p class="navbar-brand" href="#"><img src="images/logo.png" alt="Bazaroo" style="width: 85%; height:85%;"></p>
+
+          <button class="navbar-toggler" style="border: none;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+            <img src="images/icon.svg" alt="">
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ml-auto text-right" style="position: relative; left: -20px; top: -6px">
+
+              <li class="nav-item">
+                <button type="button" name="button" class="btn button-navbar scris" data-toggle="modal" data-target="#popupLogin" data-whatever="getPopupLogin">Logare</button>
+              </li>
+
+              <!-- Pop-up implementation -->
+              <div class="modal fade" id="popupLogin" tabindex="-1" role="dialog" aria-labelledby="popup" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content" style="background-color: #272A45">
+                    <br>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="text-align: right !important; margin-right: 5%; margin-left:92%; color: white;">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-title scris centru" id="labelLogin">Login</h3>
+                    <br>
+                    <div class="modal-body">
+                      <form action="#">
+                        <div class="form-group">
+                          <div class="form-text text-left" style="color: white;">Email:</div>
+                          <input type="email" class="form-control" id="inputEmailLogin" aria-describedby="emailHelp" placeholder="student@stud.upb.ro/prof@onmicrosoft.upb.ro">
+                        </div>
+                        <div class="form-group">
+                          <div class="form-text text-left" style="color: white;">Parola:</div>
+                          <input type="password" class="form-control" id="inputPasswdLogin" placeholder="">
+                          <br>
+                          <small class="form-text text-muted text-left">Nu ai cont?</small>
+                          <small class="form-text text-muted text-left"><a href="" data-toggle="modal" data-target="#popupRegister">Inregistreaza-te</a></small>
+                        </div>
+                      </form>
+                      <br>
+                      <div class="container">
+                        <div class="row pt-3">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-6 text-center">
+                            <button type="submit" class="btn btn-default btn-block button-press" id="incarcaLogin">Conectare</button>
+                          </div>
+                          <div class="col-md-3"></div>
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Finish login popup implementation-->
+
+
+
+              <li class="nav-item">
+                <button type="button" name="button" class="btn button-navbar scris" data-toggle="modal" data-target="#popupRegister" data-whatever="getPopupRegister">Creare cont</button>
+              </li>
+
+
+              <!-- Pop-up implementation -->
+              <div class="modal fade" id="popupRegister" tabindex="-1" role="dialog" aria-labelledby="popup" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content" style="background-color: #272A45">
+                    <br />
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="text-align: right !important; margin-right: 5%; margin-left:92%; color:white;">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-title scris centru" id="labelRegister">Register</h3>
+                    <br>
+                    <div class="modal-body">
+                      <div class="container">
+                        <div class="row pt-3">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-6"></div>
+                          <div class="col-md-3">
+                            <select class="form-select form-select-lg mb-3 selectForm" aria-label=".form-select-lg example" id="selectRegister">
+                              <option selected value="student">Student</option>
+                              <option value="teacher">Profesor</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <form action="#">
+                        <div class="form-group">
+                          <div class="form-text text-left" style="color: white;">Nume:</div>
+                          <input type="email" class="form-control" id="inputNumeRegister" aria-describedby="" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-text text-left" style="color: white;">Prenume:</div>
+                          <input type="email" class="form-control" id="inputPrenumeRegister" aria-describedby="" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-text text-left" style="color: white;">Email:</div>
+                          <input type="email" class="form-control" id="inputEmailRegister" aria-describedby="emailHelp" placeholder="student@stud.upb.ro/prof@onmicrosoft.upb.ro" required>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-text text-left" style="color: white;">Parola:</div>
+                          <input type="password" class="form-control" id="inputPasswdRegister" placeholder="" required>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-text text-left" style="color: white;">Confirma parola:</div>
+                          <input type="password" class="form-control" id="inputPasswdConfRegister" placeholder="" required>
+                        </div>
+                      </form>
+                      <br>
+                      <div class="container">
+                        <div class="row pt-3">
+                          <div class="col-md-3"></div>
+                          <div class="col-md-6 text-center">
+                            <button onclick="registerUser();" type="submit" class="btn btn-default btn-block button-press" id="incarcaRegister">Conectare</button>
+                          </div>
+                          <div class="col-md-3"></div>
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Finish Register popup implementation-->
+
+
+
+              <li class="nav-item">
+                <button type="button" name="button" class="btn button-navbar scris" id="#contact"><a href="#cta" style="color:white;">Contact</a></button>
+                <!-- Butonul de contact trimite la sectiunea dedicata acestuia in cadrul paginii curente -->
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <br>
+
+  <!-- Title -->
+  <section class="mb-5 pb-5">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12">
+        <br>
+        <h1 class="big-heading">Invatatul nu a fost niciodata mai simplu!</h1>
+        <h6 class="small-heading">Platforma ideala pentru meditatii online, atat pentru profesori cat si pentru studenti.</h6>
+        <br>
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <img class="title-image " src="images/pozaTitlu.png" alt="picture mockup">
+      </div>
+    </div>
+
+
+  </section>
+
+<!-- Sectiunea cu butoanele de predau si invat -->
+  <section class="mt-5 pt-5 ">
+    <div class="container container1">
+      <div class="row">
+        <div>
+          <div class="box" style="background-image: linear-gradient(#B3F3FF, #AEC5FF);"></div>
+          <div class="box stack-top text-center" style="background-color: #272A45">
+            <div class="row pt-3">
+              <div class="col-sm-3 col-md-3 col-lg-3"></div>
+              <div class="col-sm-6 col-md-6 col-lg-6 text-center">
+                <br><br>
+                <h1 class="scris" style="color: white">Cum functioneaza?</h1>
+              </div>
+              <div class="col-sm-3 col-md-3 col-lg-3"></div>
+            </div>
+            <br><br>
+            <div class="row pt-3">
+              <div class="col-sm-6 col-md-6 col-lg-6 text-center">
+                <h4 class="scris text-center" style="color: white;">Stii prea multe si vrei sa predai? Inscrie-te ca profesor.</h4>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6">
+                <h4 class="scris text-center" style="color: white;">Stii prea putine si vrei sa inveti? Inscrie-te ca student.</h4>
+              </div>
+            </div>
+            <br>
+            <div class="row pt-3">
+              <div class="col-sm-6 col-md-6 col-lg-6 text-center">
+                <button type="button" name="button" class="btn scris text-center invatPredau" data-toggle="modal" data-target="#popupRegister" data-whatever="getPopupRegister"
+                  style="background: linear-gradient(180deg, #AFD0FF 0%, #B2EEFF 99.99%, rgba(175, 209, 255, 0) 100%); color:black;">Predau</button>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6">
+                <button type="button" name="button" class="btn scris text-center invatPredau" data-toggle="modal" data-target="#popupRegister" data-whatever="getPopupRegister"
+                  style="background: linear-gradient(180deg, #AFD0FF 0%, #B2EEFF 99.99%, rgba(175, 209, 255, 0) 100%); color:black;">Invat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br><br><br><br><br>
+
+  <section>
+    <div class="container text-center">
+      <h2 class="text-left">Ce zic utilizatorii?</h2>
+      <!-- Continutul elementelor din carousel sunt populate dinamic -->
+      <div class="row my-auto">
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+          <div class="carousel-inner w-100" role="listbox" id="cardsGet"></div>
+          <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Carouselul afiseaza un singur element, ca in mockup, in format de desktop, cand se scare dimensiunea latimii sub 767px. Daca se intra pe telefon, se afiseaza tot 2, desi latimea este clar mai mica de 767 -->
+
+  <br><br><br><br><br>
+
+  <!--Contact form-->
+
+  <section id="cta">
+    <div class="container fundal-contact">
+      <div class=" text-center mt-5 ">
+        <h1 class="scris" style="font-weight:bold;">Intampini dificultati?</h1>
+        <h1 class="scris" style="font-weight:bold;">Contacteaza-ne</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <div class="card mt-2 mx-auto p-4 border-0">
+            <div class="card-body">
+              <div class="container">
+                <form id="contact-form" role="form" action="https://proba2021.lsacbucuresti.ro/contact-requests">
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group"> <label for="form_name">
+                            <div class="scris">
+                              <h6 class="scris" style="font-weight:bold;">Nume:</h6>
+                            </div>
+                          </label> <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Name is required."> </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group"> <label for="form_email">
+                            <h6 class="scris" style="font-weight:bold;">Email:</h6>
+                          </label> <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Valid email is required."> </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group"> <label for="form_message">
+                            <h6 class="scris" style="font-weight:bold;">Mesaj:</h6>
+                          </label> <textarea id="form_message" name="message" class="form-control" placeholder="" rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4"></div>
+                      <div class="col-md-4">
+                        <input type="submit" class="btn scris btn-send pt-2 btn-block text-center"
+                          style="background: linear-gradient(180deg, #AFD0FF 0%, #B2EEFF 99.99%, rgba(175, 209, 255, 0) 100%); color:black; border-radius:15px; font-weight:bold;" value="Trimite">
+                      </div>
+                      <div class="col-md-4"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="mt-5">
+    <div class="container-fluid pt-5 m-0 p-0 pb-0 ">
+      <div class="row">
+        <div class="col-md-6 footerPadding">
+          <img class="img-fluid" src="images/footer.png" alt="footer">
+        </div>
+        <div class="col-md-3 "></div>
+        <div class="col-md-3 d-flex">
+          <img src="images/fb.png" style="height:35%; width:20%; margin-top:30%;" alt="">
+          <img src="images/insta.png" style="height:35%; width:20%; margin-top:30%;" alt="">
+          <img src="images/twit.png" style="height:35%; width:20%; margin-top:30%;" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+<!--Js code-->
+<script type="text/javascript" src="index.js"></script>
+
+</html>
