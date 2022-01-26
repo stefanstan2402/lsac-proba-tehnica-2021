@@ -4,8 +4,6 @@ LSAC - PROBA IT
 
 
 autor: Stan Stefan
-mentor: Chivereanu Radu
-
 
 Am ales proba de Frontend
 
